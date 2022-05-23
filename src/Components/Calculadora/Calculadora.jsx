@@ -67,14 +67,15 @@ function Calculadora() {
         }
       } else if (operacion === '×') {
         let multiplicar = multiply(primerNumero, parseFloat(texto)).toString()
-        if (multiplicar > 999999999) {
-          setTexto('ERROR!')
-        }
         const multLen = multiplicar.length
         if (multLen > 9) {
-          const nuevoL = multLen - 9
-          multiplicar = multiplicar.substring(0, multiplicar.length - nuevoL)
-          setTexto(multiplicar)
+          if (multiplicar > 999999999) {
+            setTexto('ERROR!')
+          } else {
+            const nuevoL = multLen - 9
+            multiplicar = multiplicar.substring(0, multiplicar.length - nuevoL)
+            setTexto(multiplicar)
+          }
         } else {
           setTexto(multiplicar)
         }
