@@ -1,8 +1,61 @@
 .CalculadoraContainer{
-  width: 563px;
-  height: 1218px;
+  position: relative;
+  top: 10px;
+  left: 33%;
+  width: 450px;
+  height: 950px;
   padding: 20px;
   background-color: black;
   color: white;
   border-radius: 50px;
+}
+
+.ContenedorParteSuperior{
+  display: flex;
+  height: 150px;
+  padding: 0 20px;
+}
+
+#txtArriba{
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.mod{
+  color: green;
+}
+
+.tituloLab{
+  position: absolute;
+  left: 30px;
+}
+
+.nombreLab{
+  position: absolute;
+  right: 30px;
+}
+
+.ContenedorPantalla{
+  font-size: 80px;
+  text-align: right;
+  font-weight: 250;
+  margin-bottom: 20px;
+}
+
+.Contenedorbotones{
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(5, 100px);
+  grid-gap: 10px;
+}
+
+.ContenedorInferior{
+  position: absolute;
+  width: 200px;
+  height: 5px;
+  background-color: white;
+  bottom: 10px;
+  left: 50%;
+  border-radius: 4px;
+  transform: translateX(-50%)
 }
